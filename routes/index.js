@@ -4,8 +4,9 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', (req, res) => {
   res.render('index', {
-    title: 'Welcome to Contoso!',   
+    title: 'Welcome to Our CI/CD Assignment!',   
   });
 });
+
 
 module.exports = router;
