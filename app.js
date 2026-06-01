@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 const index = require('./routes/index');
 const who = require('./routes/who');
 const contact = require('./routes/contact');
+const test = require('./routes/test');
 
 const app = express();
 
@@ -18,7 +19,12 @@ app.use('/', express.static('public'))
 app.use('/', index);
 app.use('/who', who);
 app.use('/contact', contact);
+app.use('/test', test);
 
-app.listen(config.port, () => {
-  console.log(`Demo app is running on ${config.port}!`);
-});
+module.exports = app;
+
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`Demo app is running on ${config.port}!`);
+  });
+}
