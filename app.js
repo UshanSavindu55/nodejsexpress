@@ -21,6 +21,10 @@ app.use('/who', who);
 app.use('/contact', contact);
 app.use('/test', test);
 
-app.listen(config.port, () => {
-  console.log(`Demo app is running on ${config.port}!`);
-});
+module.exports = app;
+
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`Demo app is running on ${config.port}!`);
+  });
+}
