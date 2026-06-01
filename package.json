@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "*",
-    "express-handlebars": "^5.3.5",
+    "express-handlebars": "^9.0.1",
     "serverless-http": "^4.0.0"
   },
   "devDependencies": {
